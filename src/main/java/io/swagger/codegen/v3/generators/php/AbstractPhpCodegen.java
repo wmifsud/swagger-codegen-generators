@@ -133,6 +133,9 @@ public abstract class AbstractPhpCodegen extends DefaultCodegenConfig {
     @Override
     public void processOpts() {
         super.processOpts();
+        if (StringUtils.isBlank(templateDir)) {
+            embeddedTemplateDir = templateDir = getTemplateDir();
+        }
 
         if (additionalProperties.containsKey(PACKAGE_PATH)) {
             this.setPackagePath((String) additionalProperties.get(PACKAGE_PATH));

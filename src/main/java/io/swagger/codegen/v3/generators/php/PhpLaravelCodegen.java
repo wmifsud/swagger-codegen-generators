@@ -60,7 +60,7 @@ public class PhpLaravelCodegen extends AbstractPhpCodegen {
         supportingFiles.add(new SupportingFile("app/Providers/RouteServiceProvider.php", "app/Providers", "RouteServiceProvider.php"));
 
         // default framework boostrap folder files
-        supportingFiles.add(new SupportingFile("app/boostrap/app.php", "app/boostrap", "app.php"));
+        supportingFiles.add(new SupportingFile("bootstrap/app.php", "bootstrap", "app.php"));
 
         // default framework config folder files
         supportingFiles.add(new SupportingFile("app/config/app.php", "app/config", "app.php"));
@@ -76,6 +76,11 @@ public class PhpLaravelCodegen extends AbstractPhpCodegen {
         supportingFiles.add(new SupportingFile("app/config/services.php", "app/config", "services.php"));
         supportingFiles.add(new SupportingFile("app/config/session.php", "app/config", "session.php"));
         supportingFiles.add(new SupportingFile("app/config/view.php", "app/config", "view.php"));
+
+        // default framework public folder files
+        supportingFiles.add(new SupportingFile("database/factories/empty.php", "database/factories", "empty.php"));
+        supportingFiles.add(new SupportingFile("database/migrations/empty.php", "database/migrations", "empty.php"));
+        supportingFiles.add(new SupportingFile("database/seeds/DatabaseSeeder.php", "database/seeds", "DatabaseSeeder.php"));
 
         // default framework public folder files
         supportingFiles.add(new SupportingFile("app/public/.htaccess", "app/public", ".htaccess"));

@@ -60,36 +60,38 @@ public class PhpLaravelCodegen extends AbstractPhpCodegen {
         supportingFiles.add(new SupportingFile("app/Providers/RouteServiceProvider.php", "app/Providers", "RouteServiceProvider.php"));
 
         // default framework boostrap folder files
+        supportingFiles.add(new SupportingFile("bootstrap/cache/packages.php", "bootstrap/cache", "packages.php"));
+        supportingFiles.add(new SupportingFile("bootstrap/cache/services.php", "bootstrap/cache", "services.php"));
         supportingFiles.add(new SupportingFile("bootstrap/app.php", "bootstrap", "app.php"));
 
         // default framework config folder files
-        supportingFiles.add(new SupportingFile("app/config/app.php", "app/config", "app.php"));
-        supportingFiles.add(new SupportingFile("app/config/auth.php", "app/config", "auth.php"));
-        supportingFiles.add(new SupportingFile("app/config/broadcasting.php", "app/config", "broadcasting.php"));
-        supportingFiles.add(new SupportingFile("app/config/cache.php", "app/config", "cache.php"));
-        supportingFiles.add(new SupportingFile("app/config/cors.php", "app/config", "cors.php"));
-        supportingFiles.add(new SupportingFile("app/config/database.php", "app/config", "database.php"));
-        supportingFiles.add(new SupportingFile("app/config/filesystems.php", "app/config", "filesystems.php"));
-        supportingFiles.add(new SupportingFile("app/config/hashing.php", "app/config", "hashing.php"));
-        supportingFiles.add(new SupportingFile("app/config/logging.php", "app/config", "logging.php"));
-        supportingFiles.add(new SupportingFile("app/config/queue.php", "app/config", "queue.php"));
-        supportingFiles.add(new SupportingFile("app/config/services.php", "app/config", "services.php"));
-        supportingFiles.add(new SupportingFile("app/config/session.php", "app/config", "session.php"));
-        supportingFiles.add(new SupportingFile("app/config/view.php", "app/config", "view.php"));
+        supportingFiles.add(new SupportingFile("config/app.php", "config", "app.php"));
+        supportingFiles.add(new SupportingFile("config/auth.php", "config", "auth.php"));
+        supportingFiles.add(new SupportingFile("config/broadcasting.php", "config", "broadcasting.php"));
+        supportingFiles.add(new SupportingFile("config/cache.php", "config", "cache.php"));
+        supportingFiles.add(new SupportingFile("config/cors.php", "config", "cors.php"));
+        supportingFiles.add(new SupportingFile("config/database.php", "config", "database.php"));
+        supportingFiles.add(new SupportingFile("config/filesystems.php", "config", "filesystems.php"));
+        supportingFiles.add(new SupportingFile("config/hashing.php", "config", "hashing.php"));
+        supportingFiles.add(new SupportingFile("config/logging.php", "config", "logging.php"));
+        supportingFiles.add(new SupportingFile("config/queue.php", "config", "queue.php"));
+        supportingFiles.add(new SupportingFile("config/services.php", "config", "services.php"));
+        supportingFiles.add(new SupportingFile("config/session.php", "config", "session.php"));
+        supportingFiles.add(new SupportingFile("config/view.php", "config", "view.php"));
 
         // default framework public folder files
-        supportingFiles.add(new SupportingFile("database/factories/empty.php", "database/factories", "empty.php"));
-        supportingFiles.add(new SupportingFile("database/migrations/empty.php", "database/migrations", "empty.php"));
+        supportingFiles.add(new SupportingFile("database/factories/packages.php", "database/factories", "packages.php"));
+        supportingFiles.add(new SupportingFile("database/migrations/packages.php", "database/migrations", "packages.php"));
         supportingFiles.add(new SupportingFile("database/seeds/DatabaseSeeder.php", "database/seeds", "DatabaseSeeder.php"));
 
         // default framework public folder files
-        supportingFiles.add(new SupportingFile("app/public/.htaccess", "app/public", ".htaccess"));
-        supportingFiles.add(new SupportingFile("app/public/index.php", "app/public", "index.php"));
-        supportingFiles.add(new SupportingFile("app/public/web.config", "app/public", "web.config"));
+        supportingFiles.add(new SupportingFile("public/.htaccess", "public", ".htaccess"));
+        supportingFiles.add(new SupportingFile("public/index.php", "public", "index.php"));
+        supportingFiles.add(new SupportingFile("public/web.config", "public", "web.config"));
 
         // default framework routes folder files
-        supportingFiles.add(new SupportingFile("app/routes/api.php", "app/routes", "api.php"));
-        supportingFiles.add(new SupportingFile("app/routes/console.php", "app/routes", "console.php"));
+        supportingFiles.add(new SupportingFile("routes/api.php", "routes", "api.php"));
+        supportingFiles.add(new SupportingFile("routes/console.php", "routes", "console.php"));
 
         // default framework storage folder files
         supportingFiles.add(new SupportingFile("storage/app/.gitignore", "storage/app", ".gitignore"));

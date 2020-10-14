@@ -114,7 +114,7 @@ public abstract class DefaultCodegenConfig implements CodegenConfig {
     protected static final Logger LOGGER = LoggerFactory.getLogger(DefaultCodegenConfig.class);
 
     public static final String DEFAULT_CONTENT_TYPE = "application/json";
-    public static final String REQUEST_BODY_NAME = "body";
+    public static final String REQUEST_BODY_NAME = "request";
     public static final String DEFAULT_TEMPLATE_DIR = "handlebars";
 
     protected OpenAPI openAPI;

@@ -990,6 +990,20 @@ public abstract class AbstractJavaCodegen extends DefaultCodegenConfig {
                 model.imports.add("JsonTypeId");
             }
         }
+        // extract object name from json schema.
+        String jsonSchema = property.getJsonSchema();
+        if (jsonSchema.contains("allOf")) {
+            String objectName = jsonSchema.substring(jsonSchema.indexOf("/components/schemas/") + "/components/schemas/".length(), jsonSchema.indexOf("\"\n"));
+            if (property.getDatatype().equals("Object")) {
+                property.setDatatype(objectName);
+            }
+            if (property.getDatatypeWithEnum().equals("Object")) {
+                property.setDatatypeWithEnum(objectName);
+            }
+            if (property.getBaseType().equals("Object")) {
+                property.setBaseType(objectName);
+            }
+        }
     }
 
     @Override

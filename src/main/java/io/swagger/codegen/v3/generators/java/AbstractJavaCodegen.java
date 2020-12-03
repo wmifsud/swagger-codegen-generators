@@ -1003,6 +1003,19 @@ public abstract class AbstractJavaCodegen extends DefaultCodegenConfig {
             if (property.getBaseType().equals("Object")) {
                 property.setBaseType(objectName);
             }
+
+            if (property.getDatatype().equals("List<Object>")) {
+                property.setDatatype("List<" + objectName + ">");
+                property.items.setDatatype(objectName);
+            }
+            if (property.getDatatypeWithEnum().equals("List<Object>")) {
+                property.setDatatypeWithEnum("List<" + objectName + ">");
+                property.items.setDatatypeWithEnum(objectName);
+            }
+            if (property.getBaseType().equals("List<Object>")) {
+                property.setBaseType("List<" + objectName + ">");
+                property.items.setBaseType(objectName);
+            }
         }
     }
 

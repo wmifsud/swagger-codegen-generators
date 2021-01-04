@@ -23,6 +23,11 @@ public class {{classname}} {{#parent}}extends {{{parent}}}{{/parent}} {{#seriali
       {{/items}}
     {{/items.isEnum}}
   {{#jackson}}
+{{#vendorExtensions.x-sensitive-attribute.type}}
+    {{#vendorExtensions.x-sensitive-attribute.lifetime}}
+        @com.opc.support.commons.securitymodel.Sensitive(value=com.opc.core.programmes.api.CoreProgrammesApi.SecurityModelField.{{vendorExtensions.x-sensitive-attribute.type}}, lifetime=sensitive.Sensitive.SensitiveDataLifetime.{{vendorExtensions.x-sensitive-attribute.lifetime}})
+    {{/vendorExtensions.x-sensitive-attribute.lifetime}}
+{{/vendorExtensions.x-sensitive-attribute.type}}
   @JsonProperty("{{baseName}}"){{#withXml}}
   @JacksonXmlProperty({{#isXmlAttribute}}isAttribute = true, {{/isXmlAttribute}}{{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}localName = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}"){{/withXml}}
   {{/jackson}}
